@@ -1,0 +1,2 @@
+Дополнительные курсы: Python, Data Science, SQL, Git, Docker
+Хобби: Чтение, Путешествия

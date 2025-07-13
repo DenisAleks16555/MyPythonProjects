@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Моё Резюме</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3a7bd5, #3a6073);
+      color: white;
+      padding: 30px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .photo-wrapper {
+      flex-shrink: 0;
+    }
+
+    .photo-wrapper img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .header-text p {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .header-text h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .contact-info li i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .contact-info li a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-info li a:hover {
+      text-decoration: underline;
+    }
+
+    .fa-whatsapp {
+      color: #25D366;
+    }
+
+    .fa-telegram-plane {
+      color: #1b55a7;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #3a7bd5;
+      border-bottom: 2px solid #3a7bd5;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .item {
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      height: calc(100% - 8px);
+      width: 2px;
+      background-color: #3a7bd5;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item:last-child:before {
+      height: 15px;
+    }
+
+    .item h3 {
+      color: #2c3e50;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: linear-gradient(135deg, #3a7bd5, #3a6073);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .skill:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+#scrollTopBtn {
+  margin-left: 20px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background: linear-gradient(135deg, #2a5baa, #2a4960);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div class="photo-wrapper">
+          <img src="images/foto_1.jpg" alt="фото">
+        </div>
+        <div class="header-text">
+          <h1>Денис Тарасов</h1>
+          <p>Юрист</p>
+          <h3>Город: Павловский Посад</h3>
+          <div class="contact-info">
+            <ul>
+              <li><i class="fas fa-phone"></i> +7 (925)-177-47-00</li>
+              <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/79251774700" target="_blank">WhatsApp</a></li>
+              <li><i class="fab fa-telegram-plane"></i> <a href="https://t.me/ДенисТарасов" target="_blank">Telegram</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:aleks16555@mail.ru">aleks16555@mail.ru</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="section">
+        <h2>Образование</h2>
+
+        <div class="item">
+          <h3>Российский государственный социальный университет</h3>
+          <div class="date">2019–2025</div>
+          <p>Юриспруденция</p>
+        </div>
+
+        <div class="item">
+          <h3>Российский государственный социальный университет</h3>
+          <h4>Профессиональная переподготовка</h4>
+          <div class="date">18.09.2020 – 18.12.2020</div>
+          <p>Управление персоналом организации</p>
+        </div>
+
+        <div class="item">
+          <h3>Школа №3</h3>
+          <div class="date">1982–1991</div>
+          <p>Неполное среднее образование</p>
+        </div>
+
+        <div class="item">
+          <h3>Jackpot company</h3>
+          <div class="date">2002–2009</div>
+          <p>Старший администратор</p>
+        </div>
+
+        <div class="item">
+          <h3>Академия Top</h3>
+          <div class="date">2024–2025</div>
+          <p>Создание web-приложений с использованием Python</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Опыт работы</h2>
+
+        <div class="item">
+          <h3>Tech Solutions</h3>
+          <h3>Junior Python Developer</h3>
+          <div class="date">2022 – по настоящее время</div>
+        </div>
+
+        <div class="item">
+          <h3>IT Training Center</h3>
+          <h3>Стажер</h3>
+          <div class="date">2021–2022</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Навыки</h2>
+        <div class="skills">
+          <div class="skill">Python</div>
+          <div class="skill">HTML/CSS</div>
+          <div class="skill">Git</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Flask</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+  Создано с помощью программы "Генератора резюме", 2025 г.
+  <button id="scrollTopBtn" aria-label="Наверх">Наверх ↑</button>
+</div>      
+  </div>
+  <script>
+  document.getElementById('scrollTopBtn').addEventListener('click', () => {
+    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+            
+        
+       
+           
+                      
+              
+           
+                          
+        
+        
+        .header-top {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        /* justify-content: flex-start; прижать к левому краю */
+        /* margin-top: 0; Убираем отступ сверху */
+        }
+
+       /* Контейнер с текстом рядом с фото */ */
+        .header-text {
+        flex: 1;
+        }
+
+       
+        
+
+
+        .photo-wrapper {
+            /* position: absolute; Позволяет разместить фото в левом верхнем углу */
+            /* top: 30px; /* Отступ сверху */
+            /* left: 30px; Отступ слева */ 
+            flex-shrink: 0;
+        }
+
+        .photo-wrapper img {
+            /* display: block; */
+            width: 150px;
+            height: 150px;
+            border-radius: 8px; /* по желанию */
+            object-fit: cover; /* чтобы фото не искажалось */
+        }
+        
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0;
+            justify-content: flex-start;
+            margin-left: 200px; /* Добавляем отступ слева для текста */
+        }   
+                             
+             
+       
+        
+         
+        
+
+        /* Цвета для иконок WhatsApp и Telegram */
+        .fa-whatsapp {
+            color: #25D366;/* зелёный WhatsApp */
+        }
+
+        .fa-telegram-plane {
+            color: #1b55a7;/* синий Telegram */
+        }    
+             
+                 
+
+        
+        .item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            height: calc(100% - 8px);
+            width: 2px;
+            background-color: #3a7bd5;
+        }
+                    
+/* Ссылки в контактах — белые, с цветом иконок */
+.header-top .contact-info ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+           
+       
+    
+      <!-- <div class="section">
+        <h2>Навыки</h2>
+        <div class="skills">
+          <div class="skill">Python</div>
+          <div class="skill">HTML/CSS</div>
+          <div class="skill">Git</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Flask</div>
+        </div>
+      </div>
+    </div> -->             
+                     
+                    <!-- <h2><p>Перейти в чат WhatsApp: <a href="https://wa.me/79251774700">Начать чат</a></p></h2>
+                    <h2><p>Перейти в мой Telegram: <a href="https://t.me/Денис Тарасов">Мой Telegram</a></p></h2>
+                    <br>
+                    <br>
+                    <h3>Email<p>aleks16555@ mail.ru</p></h3>                                       
+                    <h3>Телефон<p>+7(925)-177-47-00</p></h3>
+                    <h3><p>Город<br>Павловский Посад</p><h3>
+                    <br>
+                    <br> -->             
+                 
+          
+            <!-- <ul>
+                <li><i class="fas fa-phone"></i> +7 (925)-177-47-00</li>
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/79251774700" target="_blank">WhatsApp</a></li>
+                <li><i class="fab fa-telegram-plane"></i> <a href="https://t.me/ДенисТарасов" target="_blank">Telegram</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:aleks16555@mail.ru">aleks16555@mail.ru</a></li> 
+      
+            </ul>
+        </div>
+    </div> 
+
+             
+</header> -->
+        
+       

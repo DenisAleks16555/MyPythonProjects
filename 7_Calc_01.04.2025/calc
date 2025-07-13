@@ -1,0 +1,40 @@
+list1 = [1, 2, 3, 4, 5, 5]  # Пример первого списка
+list2 = [4, 5, 6, 7, 8, 8]
+list3 = list1 + list2
+print("Объединённый список с повторениями:", list3)
+
+# 2. Убираем повторения
+list3_no_duplicates = []
+for item in list3:
+    if item not in list3_no_duplicates:
+        list3_no_duplicates.append(item)
+
+print("Объединённый список без повторений:",list3_no_duplicates) 
+common_elements = []  # Список для общих элементов
+for item in list1:
+    if item in list2 and item not in common_elements:  # Проверяем, есть ли элемент во втором списке
+        common_elements.append(item)
+
+print("Общие элементы обоих списков:", common_elements)
+# Уникальные элементы из первого списка
+unique_to_list1 = []  # Список для уникальных элементов первого списка
+for item in list1:
+    if item not in list2:  # Проверяем, есть ли элемент во втором списке
+        unique_to_list1.append(item)
+
+# Уникальные элементы из второго списка
+unique_to_list2 = []  # Список для уникальных элементов второго списка
+for item in list2:
+    if item not in list1:  # Проверяем, есть ли элемент в первом списке
+        unique_to_list2.append(item)
+        # Объединяем уникальные элементы
+unique_elements = unique_to_list1 + unique_to_list2
+print("Уникальные элементы из обоих списков:",unique_elements)
+# Минимальные и максимальные значения
+min_max_list1 = [min(list1), max(list1)]  # Минимальное и максимальное из первого списка
+min_max_list2 = [min(list2), max(list2)]  # Минимальное и максимальное из второго списка
+
+# Объединяем минимальные и максимальные значения
+min_max_combined = min_max_list1 + min_max_list2
+print("Минимальные и максимальные значения из обоих списков:", min_max_combined)
+
