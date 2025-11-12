@@ -10,3 +10,12 @@ max_length = max(len(line.rstrip('\n')) for line in lines)
 
 # Выводим результат
 print("Длина самой длинной строки:", max_length)
+
+
+
+
+
+
+
+
+
